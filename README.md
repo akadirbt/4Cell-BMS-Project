@@ -69,7 +69,7 @@ BMS-Project/
 ├── RaspberryPi/
 │   └── BMS_Project.txt         # Python GUI application
 │
-└── Images/
+└── images/
     ├── BMS_Schematic.png
     ├── circuit.jpg
     ├── adc_input_sim.png
@@ -84,7 +84,7 @@ BMS-Project/
 
 ---
 
-## ⚙️ Hardware
+## Hardware
 
 | Component | Detail |
 |---|---|
@@ -102,35 +102,35 @@ BMS-Project/
 
 ---
 
-## 📷 Images
+## Images
 
 ### Physical Circuit
-![Circuit](Images/circuit.jpg)
+![Circuit](images/circuit.jpg)
 
 ### System Running (GUI + Circuit)
-![System](Images/system_graph.jpg)
+![System](images/system_graph.jpg)
 
 ### BMS Schematic
-![Schematic](Images/BMS_Schematic.png)
+![Schematic](images/BMS_Schematic.png)
 
 ### STM32 Flowchart
-![STM32 Flowchart](Images/stm32_flowchart.png)
+![STM32 Flowchart](images/stm32_flowchart.png)
 
 ### Raspberry Pi Flowchart
-![Raspi Flowchart](Images/raspi_flowchart.png)
+![Raspi Flowchart](images/raspi_flowchart.png)
 
 ### STM32 Debugger Live Expressions
-![Debugger](Images/STM32_debugger_screen.jpg)
+![Debugger](images/STM32_debugger_screen.jpg)
 
 ### MOSFET Simulation (Cadence)
-![MOSFET Sim](Images/mosfet_sim.png)
+![MOSFET Sim](images/mosfet_sim.png)
 
 ### ADC Input Simulation
-![ADC Sim](Images/adc_input_sim.png)
+![ADC Sim](images/adc_input_sim.png)
 
 ---
 
-## 🛠️ STM32 Firmware Details
+## STM32 Firmware Details
 
 - ADC1 reads 4 cells on PA0, PA4, PC2, PC3
 - 128-sample averaging per cell for noise reduction
@@ -140,7 +140,7 @@ BMS-Project/
 - MOSFET of highest-voltage cell turns on until difference drops below threshold
 - Data sent via UART1: `Cell 1: 3.477 V\r\n`
 
-## 🐍 Raspberry Pi GUI Details
+## Raspberry Pi GUI Details
 
 - Reads UART lines starting with `"Cell"`
 - Parses cell number and voltage value
@@ -150,7 +150,7 @@ BMS-Project/
 
 ---
 
-## 📦 Dependencies (Raspberry Pi)
+## Dependencies (Raspberry Pi)
 
 ```bash
 pip install pyserial matplotlib RPi.GPIO Adafruit_DHT
@@ -158,7 +158,7 @@ pip install pyserial matplotlib RPi.GPIO Adafruit_DHT
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Flash `STM32/stm32_uart.txt` to STM32F4 using STM32CubeIDE
 2. Connect STM32 PA9 (TX) → Raspberry Pi RX
